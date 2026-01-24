@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Sentences" %>
+
+<h1>Sentences</h1>
+
+<div id="sentences">
+  <% @sentences.each do |sentence| %>
+    <%= render sentence %>
+    <p>
+      <%= link_to "Show this sentence", sentence %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New sentence", new_sentence_path %>
