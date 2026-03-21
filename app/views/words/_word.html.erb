@@ -4,4 +4,9 @@
     <%= word.name %>
   </div>
 
+  <p>
+    <strong>Updated at:</strong>
+    <%= time_tag word.updated_at, "data-local": "time", "data-format": "%B %e, %Y %l: %M%P" %>
+    old one: <%= word.updated_at %>
+  </p>
 </div>
