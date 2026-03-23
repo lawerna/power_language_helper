@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :lessons
+  resources :lessons do
+    resources :homeworks
+  end
   resources :sentences
   resources :words
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

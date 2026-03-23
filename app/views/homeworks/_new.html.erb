@@ -1,0 +1,19 @@
+<%= form_with model: [ lesson, Homework.new] do |form| %>
+  New homework:
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
+    <%= form.label :content, style: "display: block" %>
+    <%= form.text_area :content %>
+  </div>
+
+  <%= form.submit %>
+<% end %>

@@ -1,0 +1,6 @@
+<div id="<%= dom_id(homework) %>">
+  <div><b>Title: </b><%= homework.title %></div>
+  <div><b>Description: </b><%= homework.description %></div>
+  <div><b>Content: </b><%= homework.content %></div>
+  Created: <%= time_tag homework.updated_at, "data-local": "time-ago" %>
+</div>
