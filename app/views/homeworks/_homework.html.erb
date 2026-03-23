@@ -2,5 +2,6 @@
   <div><b>Title: </b><%= homework.title %></div>
   <div><b>Description: </b><%= homework.description %></div>
   <div><b>Content: </b><%= homework.content %></div>
+  Lesson: <%= link_to homework.lesson.title, lesson_path(homework.lesson) %><br>
   Created: <%= time_tag homework.updated_at, "data-local": "time-ago" %>
 </div>

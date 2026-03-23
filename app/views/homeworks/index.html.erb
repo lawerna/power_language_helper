@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Homeworks" %>
+
+<h1>Homeworks</h1>
+
+<div id="homeworks">
+  <% @homeworks.each do |homework| %>
+    <%= render homework %>
+    <p>
+      <%= link_to "Show this homework", homework %>
+    </p>
+  <% end %>
+</div>
+
+
