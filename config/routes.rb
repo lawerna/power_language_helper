@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :homeworks
+  resources :homeworks do
+    resources :comments
+  end
 
   resources :lessons do
     resources :homeworks

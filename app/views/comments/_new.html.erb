@@ -1,0 +1,9 @@
+<%= form_with model: [ homework, Comment.new] do |form| %>
+  New comment:
+  <div>
+    <%= form.label :content, style: "display: block" %>
+    <%= form.text_area :content %>
+  </div>
+
+  <%= form.submit %>
+<% end %>
