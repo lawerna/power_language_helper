@@ -109,7 +109,7 @@ accessories:
       secret:
         - POSTGRES_PASSWORD
     files:
-      - db/volume:/var/lib/postgresql/data
+      - power_language_helper_db:/var/lib/postgresql/data
 #   db:
 #     image: mysql:8.0
 #     host: 192.168.0.2
