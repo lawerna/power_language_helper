@@ -97,7 +97,19 @@ builder:
 #   user: app
 
 # Use accessory services (secrets come from .kamal/secrets).
-# accessories:
+accessories:
+  db:
+    image: postgres:16
+    host: 178.128.198.218
+    port: 127.0.0.1:5432:5432
+    env:
+      clear:
+        POSTGRES_DB: power_language_helper_production
+        POSTGRES_USER: power_language_helper
+      secret:
+        - POSTGRES_PASSWORD
+    files:
+      - db/volume:/var/lib/postgresql/data
 #   db:
 #     image: mysql:8.0
 #     host: 192.168.0.2

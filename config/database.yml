@@ -89,7 +89,9 @@ production:
     <<: *default
     database: power_language_helper_production
     username: power_language_helper
-    password: <%= ENV["POWER_LANGUAGE_HELPER_DATABASE_PASSWORD"] %>
+    password: <%= Rails.application.credentials.postgres_password %>
+    host: 178.128.198.218
+    port: 5432
   cache:
     <<: *primary_production
     database: power_language_helper_production_cache
