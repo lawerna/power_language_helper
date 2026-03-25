@@ -1,0 +1,16 @@
+name: Setup
+
+on:
+  workflow_dispatch:
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    env:
+      KAMAL_REGISTRY_PASSWORD: ${{ secrets.KAMAL_REGISTRY_PASSWORD }}
+      POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+      RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: bundle install
+      - run: bin/kamal setup
