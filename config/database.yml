@@ -90,7 +90,7 @@ production:
     database: power_language_helper_production
     username: power_language_helper
     password: <%= ENV['POSTGRES_PASSWORD'] %>
-    host:  host.docker.internal
+    host: savethatwordapp-db-new
     port: 5432
   cache:
     <<: *primary_production
