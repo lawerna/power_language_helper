@@ -1,14 +1,14 @@
 # Name of your application. Used to uniquely configure containers.
-service: power-language-helper
+service: savethatwordapp
 
 # Name of the container image (use your-user/app-name on external registries).
 # jmlados - user name on docker hub
-image: jmlados/power-language-helper
+image: jmlados/savethatwordapp
 
 # Deploy to these servers.
 servers:
   web:
-    - 178.128.198.218
+    - 142.93.172.208
   # job:
   #   hosts:
   #     - 192.168.0.1
@@ -28,14 +28,14 @@ servers:
 # Where you keep your container images.
 registry:
   # Alternatives: hub.docker.com / registry.digitalocean.com / ghcr.io / ...
-  server: localhost:5555
+  # server: localhost:5555
 
   # Needed for authenticated registries.
+  # Username of odcker hub
   username: jmlados
 
   # Always use an access token rather than real password when possible.
-  password:
-    - KAMAL_REGISTRY_PASSWORD
+  password: <%= ENV["KAMAL_REGISTRY_PASSWORD"] %>
 
 # Inject ENV variables into containers (secrets come from .kamal/secrets).
 env:
@@ -100,7 +100,7 @@ builder:
 accessories:
   db:
     image: postgres:16
-    host: 178.128.198.218
+    host: 142.93.172.208
     port: 127.0.0.1:5432:5432
     env:
       clear:
