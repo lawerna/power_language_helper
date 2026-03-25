@@ -89,7 +89,7 @@ production:
     <<: *default
     database: power_language_helper_production
     username: power_language_helper
-    password: <%= ENV['POSTGRES_PASSWORD'] %>
+    password: "wefwije2323csd_Q_DD"
     host: savethatwordapp-db
     port: 5432
   cache:
