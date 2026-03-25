@@ -89,7 +89,7 @@ production:
     <<: *default
     database: power_language_helper_production
     username: power_language_helper
-    password: <%= Rails.application.credentials.postgres_password %>
+    password: <%= ENV['POSTGRES_PASSWORD'] %>
     host: savethatwordapp-db
     port: 5432
   cache:
