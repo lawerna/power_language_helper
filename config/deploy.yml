@@ -8,7 +8,12 @@ image: jmlados/savethatwordapp
 # Deploy to these servers.
 servers:
   web:
-    - 142.93.172.208
+    hosts:
+      - 142.93.172.208
+    options:
+      add-host: host.docker.internal:host-gateway
+  #web:
+  #  - 142.93.172.208
   # job:
   #   hosts:
   #     - 192.168.0.1
