@@ -7,7 +7,7 @@ image: power_language_helper
 # Deploy to these servers.
 servers:
   web:
-    - 192.168.0.1
+    - 164.90.186.23
   # job:
   #   hosts:
   #     - 192.168.0.1
